@@ -1,0 +1,44 @@
+<RCC>
+    <qresource prefix="/">
+        <file>images/color.png</file>
+        <file>images/open_focus.png</file>
+        <file>images/open_normal.png</file>
+        <file>images/pause_black.png</file>
+        <file>images/pause_white.png</file>
+        <file>images/start_black.png</file>
+        <file>images/start_white.png</file>
+        <file>images/stop_black.png</file>
+        <file>images/stop_white.png</file>
+        <file>images/voice_black.png</file>
+        <file>images/voice_white.png</file>
+        <file>tb/add-line_horizontal.png</file>
+        <file>tb/add-line_vertical.png</file>
+        <file>tb/ah.jpg</file>
+        <file>tb/array_down.png</file>
+        <file>tb/checkbox_checked.png</file>
+        <file>tb/checkbox_unchecked.png</file>
+        <file>tb/cq.png</file>
+        <file>tb/dfws.jpg</file>
+        <file>tb/error.png</file>
+        <file>tb/fgroup.png</file>
+        <file>tb/gx.jpg</file>
+        <file>tb/hlj.jpg</file>
+        <file>tb/hn.jpg</file>
+        <file>tb/info.png</file>
+        <file>tb/js.jpg</file>
+        <file>tb/jx.jpeg</file>
+        <file>tb/ln.jpg</file>
+        <file>tb/logo.png</file>
+        <file>tb/nx.png</file>
+        <file>tb/question.png</file>
+        <file>tb/radio_normal.png</file>
+        <file>tb/radio_selected.png</file>
+        <file>tb/sc.png</file>
+        <file>tb/sd.jpg</file>
+        <file>tb/sub-line_horizontal.png</file>
+        <file>tb/sub-line_vertical.png</file>
+        <file>tb/sz.png</file>
+        <file>tb/tj.jpg</file>
+        <file>tb/zj.jpg</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,633 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>UploadDialog</class>
+ <widget class="QDialog" name="UploadDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>800</width>
+    <height>600</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>800</width>
+    <height>600</height>
+   </size>
+  </property>
+  <property name="font">
+   <font>
+    <pointsize>12</pointsize>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QStackedWidget" name="sw_page">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>50</y>
+     <width>791</width>
+     <height>541</height>
+    </rect>
+   </property>
+   <property name="currentIndex">
+    <number>1</number>
+   </property>
+   <widget class="QWidget" name="page_1">
+    <widget class="QLabel" name="lb_introduce">
+     <property name="geometry">
+      <rect>
+       <x>110</x>
+       <y>20</y>
+       <width>531</width>
+       <height>60</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>上传视频限制大小为50MB , 格式flv 或mp4
+为了增加视频热点, 上传时请勾选标签</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="le_path">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>90</y>
+       <width>621</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pb_view">
+     <property name="geometry">
+      <rect>
+       <x>670</x>
+       <y>90</y>
+       <width>81</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>浏览</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lb_jpg">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>130</y>
+       <width>54</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>缩略图</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lb_process">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>500</y>
+       <width>91</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>上传进度</string>
+     </property>
+    </widget>
+    <widget class="QProgressBar" name="pgb_upload">
+     <property name="geometry">
+      <rect>
+       <x>130</x>
+       <y>500</y>
+       <width>521</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="maximum">
+      <number>100</number>
+     </property>
+     <property name="value">
+      <number>0</number>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pb_beginUpload">
+     <property name="geometry">
+      <rect>
+       <x>670</x>
+       <y>500</y>
+       <width>81</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>开始上传</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="cb_video">
+     <property name="geometry">
+      <rect>
+       <x>670</x>
+       <y>370</y>
+       <width>95</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>影视</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="cb_food">
+     <property name="geometry">
+      <rect>
+       <x>670</x>
+       <y>170</y>
+       <width>95</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>美食</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="cb_dance">
+     <property name="geometry">
+      <rect>
+       <x>670</x>
+       <y>290</y>
+       <width>95</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>舞蹈</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="cb_outside">
+     <property name="geometry">
+      <rect>
+       <x>670</x>
+       <y>410</y>
+       <width>95</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>户外</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="cb_ennegy">
+     <property name="geometry">
+      <rect>
+       <x>670</x>
+       <y>250</y>
+       <width>95</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>正能量</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="cb_music">
+     <property name="geometry">
+      <rect>
+       <x>670</x>
+       <y>330</y>
+       <width>95</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>歌曲</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="cb_funny">
+     <property name="geometry">
+      <rect>
+       <x>670</x>
+       <y>210</y>
+       <width>95</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>搞笑</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="cb_edu">
+     <property name="geometry">
+      <rect>
+       <x>670</x>
+       <y>450</y>
+       <width>95</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>教育</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lb_gif">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>170</y>
+       <width>631</width>
+       <height>320</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(0, 0, 0);</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="page_2">
+    <widget class="VideoItem" name="wdg_videoItem" native="true">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>621</width>
+       <height>421</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(0, 0, 0);</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lb_res">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>420</y>
+       <width>621</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>结果</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lb_recPath">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>460</y>
+       <width>81</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>录制路径</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lb_broadcast">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>510</y>
+       <width>54</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>直播</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="le_savePath">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>460</y>
+       <width>541</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="le_broadcast">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>510</y>
+       <width>541</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QGroupBox" name="videoGroup">
+     <property name="geometry">
+      <rect>
+       <x>630</x>
+       <y>0</y>
+       <width>161</width>
+       <height>211</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string/>
+     </property>
+     <widget class="QCheckBox" name="cb_cam">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>20</y>
+        <width>71</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>摄像头</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="cb_desk">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>50</y>
+        <width>71</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>桌面</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lb_video">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>80</y>
+        <width>54</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>摄像头</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lb_audio">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>140</y>
+        <width>71</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>音频输入</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="cbx_cam">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>110</y>
+        <width>131</width>
+        <height>30</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="cbx_audio">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>170</y>
+        <width>131</width>
+        <height>30</height>
+       </rect>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QPushButton" name="pb_voice">
+     <property name="geometry">
+      <rect>
+       <x>640</x>
+       <y>220</y>
+       <width>30</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QSlider" name="slider_volumn">
+     <property name="geometry">
+      <rect>
+       <x>680</x>
+       <y>230</y>
+       <width>91</width>
+       <height>10</height>
+      </rect>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pb_recordBegin">
+     <property name="geometry">
+      <rect>
+       <x>640</x>
+       <y>310</y>
+       <width>101</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>开始</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pb_recordEnd">
+     <property name="geometry">
+      <rect>
+       <x>640</x>
+       <y>350</y>
+       <width>101</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>停止</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pb_see">
+     <property name="geometry">
+      <rect>
+       <x>640</x>
+       <y>390</y>
+       <width>101</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>回看</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pb_savePath">
+     <property name="geometry">
+      <rect>
+       <x>640</x>
+       <y>460</y>
+       <width>101</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>设置路径</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pb_rtmpUrl">
+     <property name="geometry">
+      <rect>
+       <x>640</x>
+       <y>510</y>
+       <width>101</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>直播地址</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lb_recTime">
+     <property name="geometry">
+      <rect>
+       <x>640</x>
+       <y>275</y>
+       <width>101</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>00:00</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>10</y>
+     <width>801</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <spacer name="horizontalSpacer">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>40</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item>
+     <widget class="QPushButton" name="pb_page1">
+      <property name="minimumSize">
+       <size>
+        <width>150</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>150</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="text">
+       <string>上传本地视频</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="pb_page2">
+      <property name="minimumSize">
+       <size>
+        <width>150</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>150</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="text">
+       <string>录制视频</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <spacer name="horizontalSpacer_2">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>40</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>VideoItem</class>
+   <extends>QWidget</extends>
+   <header location="global">videoitem.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

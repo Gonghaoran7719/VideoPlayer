@@ -1,0 +1,704 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>OnlineDialog</class>
+ <widget class="QDialog" name="OnlineDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>800</width>
+    <height>600</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>800</width>
+    <height>600</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QPushButton" name="pb_icon">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>20</y>
+     <width>60</width>
+     <height>60</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/tb/fgroup.png</normaloff>:/tb/fgroup.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>60</width>
+     <height>60</height>
+    </size>
+   </property>
+   <property name="flat">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lb_name">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>40</y>
+     <width>300</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>未登录</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pb_login">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>100</y>
+     <width>93</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>登录/注册</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="le_rtmpUrl">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>100</y>
+     <width>461</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>输入rtmp地址</string>
+   </property>
+   <property name="clearButtonEnabled">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pb_rtmpPlay">
+   <property name="geometry">
+    <rect>
+     <x>660</x>
+     <y>100</y>
+     <width>111</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>播放rtmp链接</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pb_tvShow">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>150</y>
+     <width>93</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>地方台直播</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pb_video">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>150</y>
+     <width>93</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>推荐影视</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pb_fresh">
+   <property name="geometry">
+    <rect>
+     <x>300</x>
+     <y>150</y>
+     <width>93</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>刷新影视</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pb_upload">
+   <property name="geometry">
+    <rect>
+     <x>420</x>
+     <y>150</y>
+     <width>93</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>上传视频</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pb_uploadHistory">
+   <property name="geometry">
+    <rect>
+     <x>540</x>
+     <y>150</y>
+     <width>93</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>上传历史</string>
+   </property>
+  </widget>
+  <widget class="QStackedWidget" name="sw_page">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>210</y>
+     <width>801</width>
+     <height>391</height>
+    </rect>
+   </property>
+   <property name="currentIndex">
+    <number>1</number>
+   </property>
+   <widget class="QWidget" name="page_1">
+    <widget class="QPushButton" name="pb_tv1">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>0</y>
+       <width>150</width>
+       <height>120</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset resource="resource.qrc">
+       <normaloff>:/tb/hn.jpg</normaloff>:/tb/hn.jpg</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>150</width>
+       <height>100</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pb_tv2">
+     <property name="geometry">
+      <rect>
+       <x>170</x>
+       <y>0</y>
+       <width>150</width>
+       <height>120</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset resource="resource.qrc">
+       <normaloff>:/tb/gx.jpg</normaloff>:/tb/gx.jpg</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>150</width>
+       <height>100</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pb_tv3">
+     <property name="geometry">
+      <rect>
+       <x>320</x>
+       <y>0</y>
+       <width>150</width>
+       <height>120</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset resource="resource.qrc">
+       <normaloff>:/tb/dfws.jpg</normaloff>:/tb/dfws.jpg</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>150</width>
+       <height>100</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pb_tv4">
+     <property name="geometry">
+      <rect>
+       <x>470</x>
+       <y>0</y>
+       <width>150</width>
+       <height>120</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset resource="resource.qrc">
+       <normaloff>:/tb/zj.jpg</normaloff>:/tb/zj.jpg</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>150</width>
+       <height>100</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pb_tv5">
+     <property name="geometry">
+      <rect>
+       <x>620</x>
+       <y>0</y>
+       <width>150</width>
+       <height>120</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset resource="resource.qrc">
+       <normaloff>:/tb/js.jpg</normaloff>:/tb/js.jpg</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>150</width>
+       <height>100</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pb_tv10">
+     <property name="geometry">
+      <rect>
+       <x>620</x>
+       <y>130</y>
+       <width>150</width>
+       <height>120</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset resource="resource.qrc">
+       <normaloff>:/tb/jx.jpeg</normaloff>:/tb/jx.jpeg</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>150</width>
+       <height>100</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pb_tv9">
+     <property name="geometry">
+      <rect>
+       <x>470</x>
+       <y>130</y>
+       <width>150</width>
+       <height>120</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset resource="resource.qrc">
+       <normaloff>:/tb/ah.jpg</normaloff>:/tb/ah.jpg</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>150</width>
+       <height>100</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pb_tv6">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>130</y>
+       <width>150</width>
+       <height>120</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset resource="resource.qrc">
+       <normaloff>:/tb/hlj.jpg</normaloff>:/tb/hlj.jpg</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>150</width>
+       <height>100</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pb_tv8">
+     <property name="geometry">
+      <rect>
+       <x>320</x>
+       <y>130</y>
+       <width>150</width>
+       <height>120</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset resource="resource.qrc">
+       <normaloff>:/tb/sd.jpg</normaloff>:/tb/sd.jpg</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>150</width>
+       <height>100</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pb_tv7">
+     <property name="geometry">
+      <rect>
+       <x>170</x>
+       <y>130</y>
+       <width>150</width>
+       <height>120</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset resource="resource.qrc">
+       <normaloff>:/tb/ln.jpg</normaloff>:/tb/ln.jpg</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>150</width>
+       <height>100</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pb_tv15">
+     <property name="geometry">
+      <rect>
+       <x>620</x>
+       <y>260</y>
+       <width>150</width>
+       <height>120</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset resource="resource.qrc">
+       <normaloff>:/tb/sz.png</normaloff>:/tb/sz.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>150</width>
+       <height>100</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pb_tv14">
+     <property name="geometry">
+      <rect>
+       <x>470</x>
+       <y>260</y>
+       <width>150</width>
+       <height>120</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset resource="resource.qrc">
+       <normaloff>:/tb/nx.png</normaloff>:/tb/nx.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>150</width>
+       <height>100</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pb_tv11">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>260</y>
+       <width>150</width>
+       <height>120</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset resource="resource.qrc">
+       <normaloff>:/tb/sc.png</normaloff>:/tb/sc.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>150</width>
+       <height>100</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pb_tv12">
+     <property name="geometry">
+      <rect>
+       <x>170</x>
+       <y>260</y>
+       <width>150</width>
+       <height>120</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset resource="resource.qrc">
+       <normaloff>:/tb/tj.jpg</normaloff>:/tb/tj.jpg</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>150</width>
+       <height>100</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pb_tv13">
+     <property name="geometry">
+      <rect>
+       <x>320</x>
+       <y>260</y>
+       <width>150</width>
+       <height>120</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset resource="resource.qrc">
+       <normaloff>:/tb/cq.png</normaloff>:/tb/cq.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>150</width>
+       <height>100</height>
+      </size>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="page_2">
+    <widget class="QMyMovieLabel" name="pb_play1" native="true">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>0</y>
+       <width>150</width>
+       <height>120</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QMyMovieLabel" name="pb_play2" native="true">
+     <property name="geometry">
+      <rect>
+       <x>170</x>
+       <y>0</y>
+       <width>150</width>
+       <height>120</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QMyMovieLabel" name="pb_play3" native="true">
+     <property name="geometry">
+      <rect>
+       <x>320</x>
+       <y>0</y>
+       <width>150</width>
+       <height>120</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QMyMovieLabel" name="pb_play4" native="true">
+     <property name="geometry">
+      <rect>
+       <x>470</x>
+       <y>0</y>
+       <width>150</width>
+       <height>120</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QMyMovieLabel" name="pb_play5" native="true">
+     <property name="geometry">
+      <rect>
+       <x>620</x>
+       <y>0</y>
+       <width>150</width>
+       <height>120</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QMyMovieLabel" name="pb_play10" native="true">
+     <property name="geometry">
+      <rect>
+       <x>620</x>
+       <y>130</y>
+       <width>150</width>
+       <height>120</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QMyMovieLabel" name="pb_play6" native="true">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>130</y>
+       <width>150</width>
+       <height>120</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QMyMovieLabel" name="pb_play9" native="true">
+     <property name="geometry">
+      <rect>
+       <x>470</x>
+       <y>130</y>
+       <width>150</width>
+       <height>120</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QMyMovieLabel" name="pb_play8" native="true">
+     <property name="geometry">
+      <rect>
+       <x>320</x>
+       <y>130</y>
+       <width>150</width>
+       <height>120</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QMyMovieLabel" name="pb_play7" native="true">
+     <property name="geometry">
+      <rect>
+       <x>170</x>
+       <y>130</y>
+       <width>150</width>
+       <height>120</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QMyMovieLabel" name="pb_play15" native="true">
+     <property name="geometry">
+      <rect>
+       <x>620</x>
+       <y>260</y>
+       <width>150</width>
+       <height>120</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QMyMovieLabel" name="pb_play11" native="true">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>260</y>
+       <width>150</width>
+       <height>120</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QMyMovieLabel" name="pb_play14" native="true">
+     <property name="geometry">
+      <rect>
+       <x>470</x>
+       <y>260</y>
+       <width>150</width>
+       <height>120</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QMyMovieLabel" name="pb_play12" native="true">
+     <property name="geometry">
+      <rect>
+       <x>170</x>
+       <y>260</y>
+       <width>150</width>
+       <height>120</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QMyMovieLabel" name="pb_play13" native="true">
+     <property name="geometry">
+      <rect>
+       <x>320</x>
+       <y>260</y>
+       <width>150</width>
+       <height>120</height>
+      </rect>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QMyMovieLabel</class>
+   <extends>QWidget</extends>
+   <header location="global">qmymovielabel.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="resource.qrc"/>
+ </resources>
+ <connections/>
+</ui>
